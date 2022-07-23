@@ -49,9 +49,13 @@
                 }
             }
 
-            form{
+            .form{
                 display: flex;
                 flex-direction: column;
+
+                &-register{
+                    gap: 30px;
+                }
                 .input-container{
 
                     &__password{

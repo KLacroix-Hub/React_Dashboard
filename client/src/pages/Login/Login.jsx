@@ -47,11 +47,11 @@ function Login() {
 				<div className="login-container__form">
 					<h1 className='login-container__form__title'>Connexion</h1>
 					<p className='login-container__form__register-link'>
-						Si tu n’as pas de compte enregistré,
+						Aucun compte ?
 						<br />
 						<a className='link' href="/register">Inscris-toi ici</a>
 					</p>
-					<form onSubmit={loginUser}>
+					<form onSubmit={loginUser} className="form">
 						<div className='input-container'>
 							<label htmlFor="email">Email</label>
 							<div className='input-container__icon'>
