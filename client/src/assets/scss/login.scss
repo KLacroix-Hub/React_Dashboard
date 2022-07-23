@@ -1,0 +1,131 @@
+.block-container{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 95vh;
+    overflow: hidden;
+
+    @media (max-width:900px){
+        grid-template-columns: 1fr;
+    }
+
+    .login-container{
+        padding-top: 10px;
+        padding-left: 30px;
+
+        @media(max-width:600px){
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &__form{
+            margin-top: 50px;
+            padding-left: 70px;
+            padding-right: 120px;
+
+            @media (max-width:600px){
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+            }
+
+            @media (max-width:1024px){
+                padding-left: 40px;
+                padding-right: 50px;
+            }
+
+            @media (max-width:900px){
+                padding-right: 70px;
+            }
+
+            &__title{
+                @include h1-title($primary);
+            }
+            &__register-link{
+                @include body-sm($primary-text);
+                margin-bottom: 60px;
+
+                .link{
+                    @include body-xl($link);
+                }
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                .input-container{
+
+                    &__password{
+                        margin-bottom: 60px;
+                        margin-top: 50px;
+
+                        @media (max-width:1024px){
+                            margin-top: 25px;
+                        }
+                    }
+                    label{
+                        @include body-sm($tertiary-text);
+                    }
+                    &__icon{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        margin-top: 15px;
+                        width: 100%;
+
+                        input{
+                            @include body-sm($primary-text);
+                            border: none !important;
+                            width: 85%;
+
+                            @media (max-width:600px){
+                                width: 80%;
+                            }
+
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+
+                        &::after{
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            background-color: $primary;
+                        }
+                    }
+                    
+                }
+
+                .button{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    background: $primary;
+                    border-radius: 30px;
+                    @include h6-title($white)
+                }
+            }
+        }
+    }
+
+    .login-thumb{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+
+        @media (max-width:900px){
+            display: none;
+        }
+        img{
+            height: 95vh;
+        }
+    }
+}

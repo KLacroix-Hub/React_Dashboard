@@ -1,0 +1,9 @@
+// Importation des couleurs
+@import './assets/scss/colors';
+// Importation des templates typographique
+@import './assets/scss/typo';
+
+//Importation des styles des différents components
+@import './assets/scss/header';
+@import './assets/scss/login';
+@import './assets/scss/dashboard';
